@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="iterx — 说出想法，硬件成真 · Idea-to-Hardware">
+  <style>
+    :root { --bg:#f8f7f3; --ink:#1b1b18; --muted:#6b6a63; --chip:#ffffff; --line:#d9d6cc; --trace:#b8742f; --accent:#1f6f4a; --accent-ink:#ffffff; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#121211; --ink:#f2f1ec; --muted:#a3a198; --chip:#1c1c1a; --line:#34332f; --trace:#d08a42; --accent:#3fae7a; --accent-ink:#0d0d0c; }
+    }
+    .bg { fill: var(--bg); }
+    .mark { fill: var(--ink); font: 700 104px ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace; letter-spacing: -4px; }
+    .tag { fill: var(--ink); font: 600 30px -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Segoe UI", sans-serif; }
+    .sub { fill: var(--muted); font: 400 21px -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Segoe UI", sans-serif; }
+    .corner { fill: var(--muted); font: 500 16px ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+    .trace { stroke: var(--trace); stroke-width: 3; fill: none; }
+    .via { fill: var(--bg); stroke: var(--trace); stroke-width: 3; }
+    .chip { fill: var(--chip); stroke: var(--line); stroke-width: 1.5; }
+    .chip-on { fill: var(--accent); }
+    .label { fill: var(--ink); font: 500 19px -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Segoe UI", sans-serif; text-anchor: middle; }
+    .label-on { fill: var(--accent-ink); font-weight: 700; }
+    .pin { fill: var(--line); }
+  </style>
+  <rect class="bg" width="1200" height="360" rx="20"/>
+
+  <text class="corner" x="1120" y="56" text-anchor="end">词元开物 · iterxlabs</text>
+  <text class="mark" x="76" y="150">iterx</text>
+  <text class="tag" x="80" y="200">说出想法，硬件成真。</text>
+  <text class="sub" x="80" y="232">Idea-to-Hardware infrastructure for AI agents</text>
+
+  <!-- 信号走线：想法一路流到实物 -->
+  <path class="trace" d="M 84 300 H 1116"/>
+  <g>
+    <rect class="chip" x="84"  y="278" width="120" height="44" rx="8"/><text class="label" x="144"  y="307">想法</text>
+    <rect class="chip" x="236" y="278" width="120" height="44" rx="8"/><text class="label" x="296"  y="307">选型</text>
+    <rect class="chip" x="388" y="278" width="120" height="44" rx="8"/><text class="label" x="448"  y="307">接线</text>
+    <rect class="chip" x="540" y="278" width="120" height="44" rx="8"/><text class="label" x="600"  y="307">固件</text>
+    <rect class="chip" x="692" y="278" width="120" height="44" rx="8"/><text class="label" x="752"  y="307">仿真</text>
+    <rect class="chip" x="844" y="278" width="120" height="44" rx="8"/><text class="label" x="904"  y="307">成板</text>
+    <rect class="chip-on" x="996" y="278" width="120" height="44" rx="8"/><text class="label label-on" x="1056" y="307">实物</text>
+  </g>
+  <g>
+    <circle class="via" cx="220" cy="300" r="5"/><circle class="via" cx="372" cy="300" r="5"/>
+    <circle class="via" cx="524" cy="300" r="5"/><circle class="via" cx="676" cy="300" r="5"/>
+    <circle class="via" cx="828" cy="300" r="5"/><circle class="via" cx="980" cy="300" r="5"/>
+  </g>
+</svg>
