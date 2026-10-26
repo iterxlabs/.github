@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask the community / 社区提问
+    url: https://community.iterx.ai
+    about: Usage questions, build ideas and show-and-tell. / 使用问题、作品点子与作品分享。
+  - name: Report a security issue / 报告安全问题
+    url: https://www.iterx.ai/contact
+    about: Please do not report vulnerabilities in public issues. / 请不要在公开 issue 中报告漏洞。
+  - name: Service status / 服务状态
+    url: https://www.iterx.ai/status
+    about: Check whether iterx services are up. / 查看 iterx 服务是否正常。

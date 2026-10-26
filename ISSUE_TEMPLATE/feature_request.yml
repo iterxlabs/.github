@@ -1,0 +1,26 @@
+name: Feature, board or part request / 功能、板卡与元件建议
+description: Propose a new capability, board, template, or a part data fix. / 新功能、新板卡、新模板或元件资料纠错。
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type / 类型
+      options:
+        - New feature / 新功能
+        - New board / 新板卡
+        - New template or recipe / 新模板或配方
+        - Part data fix / 元件资料纠错
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to build, and what is missing? / 你想做什么，缺了什么？
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source material / 来源资料
+      description: Datasheet, official pinout, or product link for boards and parts. / 板卡与元件请附数据手册、官方引脚图或商品链接。

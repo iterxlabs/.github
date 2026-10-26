@@ -1,67 +1,54 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iterxlabs/.github/main/profile/banner.svg" width="100%" alt="iterx — 说出想法，硬件成真 · Idea-to-Hardware">
+  <img src="https://raw.githubusercontent.com/iterxlabs/.github/main/profile/banner.svg" width="100%" alt="iterx — Say the idea. Get the hardware.">
 </p>
 
 <p align="center">
-  <a href="https://www.iterx.ai">官网</a> ·
-  <a href="https://community.iterx.ai">社区</a> ·
-  <a href="https://download.iterx.ai">下载客户端</a> ·
+  <a href="https://www.iterx.ai">Website</a> ·
+  <a href="https://community.iterx.ai">Community</a> ·
+  <a href="https://download.iterx.ai">Download</a> ·
   <a href="https://www.npmjs.com/package/@iterx/cli">npm</a> ·
-  <a href="https://www.iterx.ai/status">服务状态</a>
+  <a href="https://www.iterx.ai/status">Status</a> ·
+  <a href="https://github.com/iterxlabs/.github/blob/main/profile/README.zh-CN.md">简体中文</a>
 </p>
 
-## iterx 是什么
+## What is iterx
 
-**iterx 是 AI 硬件创造的基础设施：agent 用它做硬件，人用它把想法变成实物。**
+**iterx is Idea-to-Hardware infrastructure: AI agents use it to build hardware, people use it to turn ideas into real things.**
 
-跟你的 AI 助手说一句"做一个摸头会亮的灯"，iterx 负责把这句话推进成一套真实的硬件工程：查元件和针脚、校验接线、编译固件、软件仿真、生成电路板、烧录上板，每一步都留下可以检查的回执。
+Tell your AI agent *"make a lamp that lights up when I pat it"*. iterx drives that sentence through a real hardware project — part lookup and pinouts, wiring checks, firmware build, software simulation, PCB generation and flashing — leaving a checkable receipt at every step.
 
 ```
-想法 → 选型与 BOM → 接线与网表 → 固件 → 编译与仿真 → 成板与制造 → 实物
+Idea → Parts & BOM → Wiring & netlist → Firmware → Build & simulate → Board & fab → Hardware
 ```
 
-## 30 秒上手
+## Get started in 30 seconds
 
 ```bash
-npm i -g @iterx/cli          # 需要 Node.js ≥ 22
-iterx login                  # 网页注册 / 登录 IterxAI 账号
+npm i -g @iterx/cli          # Node.js ≥ 22
+iterx login                  # sign up / sign in to your IterxAI account in the browser
 iterx create my-lamp --board uno
 ```
 
-然后在 Claude Code、Codex、Trae 或 WorkBuddy 里说：**"用 iterx 做一个超声波测距、距离近时亮红灯的小装置，先软件仿真。"**
+Then ask Claude Code, Codex, Trae or WorkBuddy: **"Use iterx to build an ultrasonic distance sensor that turns a red LED on when something is close. Simulate it first."**
 
-没有开发板也能跑：Arduino 与 ESP32 系列都支持软件仿真。
+No board on your desk? Arduino and the ESP32 family run in software simulation.
 
-## 生态
+## Ecosystem
 
-| | 是什么 | 怎么用 |
+| | What it is | Get it |
 | --- | --- | --- |
-| **iterx CLI** | 给 AI agent 调用的硬件工具链与 MCP server，自身不调用任何大模型 | `npm i -g @iterx/cli` |
-| **create-iterx** | 一条命令建好硬件项目和 agent 配置 | `npm create iterx` |
-| **IterxAI 桌面端** | 内置 AI 的硬件 IDE：选型、接线、仿真、成板、三维外壳 | [下载](https://download.iterx.ai) |
-| **词元开物社区** | 分享作品，一键复刻别人的硬件，复刻关系自动标注"源于" | [community.iterx.ai](https://community.iterx.ai) |
+| **iterx CLI** | Hardware toolchain and MCP server for AI agents. It never calls an LLM itself — your agent is the brain | `npm i -g @iterx/cli` |
+| **create-iterx** | One command to scaffold a hardware project with agent config | `npm create iterx` |
+| **IterxAI Desktop** | Hardware IDE with built-in AI: parts, wiring, simulation, boards and 3D enclosures | [Download](https://download.iterx.ai) |
+| **Community** | Share builds and remix anyone's hardware in one click; every remix links back to its source | [community.iterx.ai](https://community.iterx.ai) |
 
-## 我们相信
+## What we believe
 
-- **能跑才算数。** 编译通过不等于仿真成功，仿真成功不等于真机验证，每一步分开记录证据。
-- **事实不靠猜。** 元件身份与引脚绑定可信来源，不从名称或图片推测。
-- **成熟模块优先。** 先用核心板与成品模块跑通，再进入载板与制造。
-- **AI 加速，人做决定。** 电气、安全与制造的关键确认始终在人手里。
-
-<details>
-<summary><b>English</b></summary>
-
-**iterx is Idea-to-Hardware infrastructure.** Tell your AI agent what you want to build; iterx turns it into a real, checkable hardware project — parts lookup, wiring checks, firmware build, software simulation (no board needed), PCB generation and flashing, with a receipt at every step.
-
-```bash
-npm i -g @iterx/cli && iterx login
-iterx create my-lamp --board uno
-```
-
-Works with Claude Code, Codex, Trae and WorkBuddy via CLI or MCP. The CLI itself never calls an LLM — your agent is the brain.
-
-</details>
+- **It counts when it runs.** A build is not a simulation, and a simulation is not a tested board. Each step keeps its own evidence.
+- **Facts, not guesses.** Part identity and pinouts come from trusted sources, never from a name or a picture.
+- **Proven modules first.** Get it working on dev boards and off-the-shelf modules, then move to carrier boards and fab.
+- **AI speeds up, people decide.** Electrical, safety and manufacturing calls stay with a human.
 
 ---
 
-<p align="center"><sub>词元开物 IterXAI · Shenzhen · <code>~(^o^)~</code> Evan says hi</sub></p>
+<p align="center"><sub>IterXAI 词元开物 · Shenzhen · <code>~(^o^)~</code> Evan says hi</sub></p>

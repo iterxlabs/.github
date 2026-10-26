@@ -1,0 +1,39 @@
+name: Bug report / 问题报告
+description: Something does not work as documented. / 功能与文档描述不符。
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please run `iterx doctor --json` first — many problems come with a ready `fix`.
+        感谢反馈！请先运行 `iterx doctor --json`，很多问题会直接给出修复方法。
+  - type: input
+    id: version
+    attributes:
+      label: iterx version / 版本
+      description: Output of `iterx --version`
+      placeholder: "0.6.2"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: OS, Node.js version, board, and your agent (Claude Code, Codex, Trae…)
+      placeholder: "macOS 15 arm64, Node 22.12, esp32-devkit, Claude Code"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and full JSON output / 命令与完整 JSON 输出
+      description: Include `error.code` and `error.fix`. Remove any tokens.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect? / 期望的结果
+    validations:
+      required: true
